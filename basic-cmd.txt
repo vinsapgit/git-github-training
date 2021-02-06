@@ -1,0 +1,51 @@
+   First User activities: 
+   Initial repo creatio in github.com
+   Init local repo
+   Link local repo with remote repository
+   
+   61  git init
+   62  git add README.md 
+   66  git commit -m "First Maven App"
+   67  git branch -M main
+   68  git remote add origin https://github.com/github06022021/handson-basic.git
+   69  git push -u origin main
+   
+   
+   Second user activities
+   - Cloning and modfication of a file , then push to repo repo.
+   
+   84  mkdir second_user
+   85  cd second_user/
+   87  git clone https://github.com/github06022021/handson-basic.git
+   89  cd handson-basic/
+   91  vi README.md  [use any text editor to modify this file]
+   92  cat README.md 
+   93  git status
+   94  git add README.md 
+   95  git commit  -m "Feature 2 impl"
+   96  git push -u origin main
+   
+   
+   First User activities after second user pushed the changes
+   <change directory to local repo> 
+   Eg: /home/labsuser/handson-basic [It is a first user git repo in local machine]
+   $ cat README.md
+      First configuration
+      Second
+   $ git pull
+   Output>>
+        remote: Enumerating objects: 5, done.
+        remote: Counting objects: 100% (5/5), done.
+        remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+        Unpacking objects: 100% (3/3), done.
+        From https://github.com/github06022021/handson-basic
+           9cfa72a..f05c9a3  main       -> origin/main
+        Updating 9cfa72a..f05c9a3
+        Fast-forward
+         README.md | 1 +
+         1 file changed, 1 insertion(+)
+    $ cat README.md
+      First configuration
+      Second
+      Third      
+         
