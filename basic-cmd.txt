@@ -94,7 +94,7 @@ $ git checkout main
 $ git merge <Source branch which is going to be merged>
   Eg:
    git merge Feature-1 [locally merge Feature-1 branch into main branch]
-$ git puch -u origin main  [it updated "main" branch with Feature branch changes]
+$ git push -u origin main  [it updated "main" branch with Feature branch changes]
    
   
 
