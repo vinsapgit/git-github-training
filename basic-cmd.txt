@@ -79,7 +79,7 @@ $ git branch
     *Feature-1.  [current working branch]
     main
 $ vi README.md
-$ add README.md 
+$ git add README.md 
 $ git commit  -m "Feature 1 impl "
 $ git push -u origin Feature-1     
 
@@ -95,6 +95,3 @@ $ git merge <Source branch which is going to be merged>
   Eg:
    git merge Feature-1 [locally merge Feature-1 branch into main branch]
 $ git push -u origin main  [it updated "main" branch with Feature branch changes]
-   
-  
-
