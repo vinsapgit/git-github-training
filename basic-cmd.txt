@@ -1,11 +1,4 @@
-  142  git branch
-  143  git fetch
-  145  git branch -r
-  147  git checkout Feature-1
-  148  git branch
-
-
-
+Use case: 1
 
    First User activities: 
    ======================
@@ -21,7 +14,8 @@
    git branch -M main
    git remote add origin https://github.com/github06022021/handson-basic.git
    git push -u origin main
-   
+  
+Use case: 2  
    ============================
    Second user activities
    - Cloning and modfication of a file , then push to repo repo.
@@ -39,7 +33,7 @@
    95  git commit  -m "Feature 2 impl"
    96  git push -u origin main
    
-   
+Use case: 3   
    ============================   ============================   ============================
    First User activities after second user pushed the changes
    <change directory to local repo> 
@@ -68,3 +62,39 @@
       Second
       Third      
          
+Use case: 4
+===============================
+Create a feature branch via Github.com [Switch branch/Tags]
+
+Second User wants to start work on some feature.
+$ git branch -r [lsit down all remote branches]
+  output>>> 
+    Feature-1
+    main
+$ git checkout <branch name>.  [download the codebase of that branch/ switch to that branch]
+  Eg:  git checkout Feature-1
+
+$ git branch
+  output>> 
+    *Feature-1.  [current working branch]
+    main
+$ vi README.md
+$ add README.md 
+$ git commit  -m "Feature 1 impl "
+$ git push -u origin Feature-1     
+
+Branch "Feature-1" is ahead of "main" branch. So we need to merge into "main" branch
+
+Use case: 5
+===========
+Merge the Feature branch into anthoer branch/ main branch
+User should be changed to branch in which merging is required.
+
+$ git checkout main
+$ git merge <Source branch which is going to be merged>
+  Eg:
+   git merge Feature-1 [locally merge Feature-1 branch into main branch]
+$ git puch -u origin main  [it updated "main" branch with Feature branch changes]
+   
+  
+
