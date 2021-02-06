@@ -1,19 +1,32 @@
+  142  git branch
+  143  git fetch
+  145  git branch -r
+  147  git checkout Feature-1
+  148  git branch
+
+
+
+
    First User activities: 
-   Initial repo creatio in github.com
-   Init local repo
-   Link local repo with remote repository
+   ======================
+   [github.com] Create a remote repository in github.com [User should have github account]
    
-   61  git init
-   62  git add README.md 
-   66  git commit -m "First Maven App"
-   67  git branch -M main
-   68  git remote add origin https://github.com/github06022021/handson-basic.git
-   69  git push -u origin main
+   [local machine] Init local repo
+   [local machine] Link local repo with remote repository
    
+   echo "# second-repo" >> README.md
+   git init
+   git add README.md
+   git commit -m "first commit"
+   git branch -M main
+   git remote add origin https://github.com/github06022021/handson-basic.git
+   git push -u origin main
    
+   ============================
    Second user activities
    - Cloning and modfication of a file , then push to repo repo.
-   
+   ============================
+     
    84  mkdir second_user
    85  cd second_user/
    87  git clone https://github.com/github06022021/handson-basic.git
@@ -22,17 +35,22 @@
    92  cat README.md 
    93  git status
    94  git add README.md 
+       git add . [for all files] 
    95  git commit  -m "Feature 2 impl"
    96  git push -u origin main
    
    
+   ============================   ============================   ============================
    First User activities after second user pushed the changes
    <change directory to local repo> 
    Eg: /home/labsuser/handson-basic [It is a first user git repo in local machine]
+   ============================   ============================   ============================
    $ cat README.md
       First configuration
       Second
-   $ git pull
+   
+   $ git pull  [it downloads all the remote changes to the local system.]
+   
    Output>>
         remote: Enumerating objects: 5, done.
         remote: Counting objects: 100% (5/5), done.
@@ -44,6 +62,7 @@
         Fast-forward
          README.md | 1 +
          1 file changed, 1 insertion(+)
+         
     $ cat README.md
       First configuration
       Second
