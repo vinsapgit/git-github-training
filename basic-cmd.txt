@@ -155,7 +155,12 @@ $sudo git config --system commit.template /home/labsuser/commit-template.txt
 Use case 9:
 After completion of any Feature branch, we need to delete from repo Or may be wrongly created a brach.
 [Pick the branch from github repo]
-$ git branch -D Feature-1
-$ git push origin --delete Feature-1
+$ git branch -D Feature-1 [locally delete the branch]
+$ git push origin --delete Feature-1 []
+
+[See the origin of repo]
+$ git remote -v
+origin  https://github.com/github06022021/second-repo.git (fetch)
+origin  https://github.com/github06022021/second-repo.git (push)
 
 
