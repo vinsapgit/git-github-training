@@ -95,3 +95,54 @@ $ git merge <Source branch which is going to be merged>
   Eg:
    git merge Feature-1 [locally merge Feature-1 branch into main branch]
 $ git push -u origin main  [it updated "main" branch with Feature branch changes]
+
+Use case: 6
+=========
+To use ".gitignore" [git is looking for this file to ignore the file pattern] file: to stop tracking of unwanted files eg log, temp, intermidiate build files.
+$ cat .gitignore 
+*.txt
+tmp/
+output
+classes
+
+
+Use case: 7
+===========
+To use git commit Template: To fallow the convension setup by team-mates or within organisation.
+
+$cat commit-template.txt 
+Comments:
+
+Jira:
+
+Bug:
+
+Reviwers:
+Set the commit template in git conf. Based on the scope, we can choose the level. It can be local, global and system.
+
+$ sudo git config --system commit.template /home/labsuser/commit-template.txt
+
+Use case 8:
+==========
+Example for different configuration levels:
+local config:
+[listing the local repo config]
+
+$ git remote add origin https://github.com/github06022021/repo-1.git
+$ git config --local -l 
+   output>>> 
+   labsuser@ubuntu1804:~/repo2/second-repo$ git config --local -l
+      core.repositoryformatversion=0
+      core.filemode=true
+      core.bare=false
+      core.logallrefupdates=true
+      """remote.origin.url=https://github.com/github06022021/second-repo.git"""
+      remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+      branch.master.remote=origin
+      branch.master.merge=refs/heads/master
+
+[Set a configuration for all repos. This configuration is independent of any repo.]
+$git config --global core.excludesfile ~/.gitignore_all_repo 
+
+[Set a configuration for all git users in the system [perticular machine]. Set the commit template at System level.
+$sudo git config --system commit.template /home/labsuser/commit-template.txt
