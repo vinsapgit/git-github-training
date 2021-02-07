@@ -104,6 +104,9 @@ $ cat .gitignore
 tmp/
 output
 classes
+$ git add .gitignore
+$ git commit -m "Added gitignore"
+$ git push 
 
 
 Use case: 7
@@ -121,6 +124,8 @@ Reviwers:
 Set the commit template in git conf. Based on the scope, we can choose the level. It can be local, global and system.
 
 $ sudo git config --system commit.template /home/labsuser/commit-template.txt
+$ git commit 
+
 
 Use case 8:
 ==========
