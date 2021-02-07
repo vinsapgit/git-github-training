@@ -216,4 +216,18 @@ output>>
  $git difftool 68017db15a45604db443064bd30a87e25d553198 c2874f9cf8bbfd830d127e7e53955b14d0c2aed7
    
    
-   
+  Use case 12:
+  ===========
+  How to store unfinish work and continue on other work items.
+  221  git status
+  222  git stash
+  223  git stash list
+  225  git stash apply [apply to stage but do not delete from stash]
+  228  git stash pop [it pisk from top and also remove it from stash list]
+  231  git stash drop [it picks the latest stash ]
+  236  git stash save  "App5 implment in progress..."
+  239  git stash clear
+  240  git stash list
+  
+  
+  
