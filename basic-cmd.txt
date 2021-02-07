@@ -151,3 +151,11 @@ $git config --global core.excludesfile ~/.gitignore_all_repo
 
 [Set a configuration for all git users in the system [perticular machine]. Set the commit template at System level.
 $sudo git config --system commit.template /home/labsuser/commit-template.txt
+
+Use case 9:
+After completion of any Feature branch, we need to delete from repo Or may be wrongly created a brach.
+[Pick the branch from github repo]
+$ git branch -D Feature-1
+$ git push origin --delete Feature-1
+
+
