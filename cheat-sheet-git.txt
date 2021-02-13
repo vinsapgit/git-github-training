@@ -27,16 +27,23 @@
 - Delete brach
 	$git push origin :<branchname> [remote]
 	$git branch -D <branchname> [local]
-- .gitignore file
-- commit.template
-- $git clone <git repo>
-- $git pull
-- $git merge <branch>
-- $git log
-	git log --oneline
-	git log -q
-	git log -p
-	git log --stat --summary
+- Store password
+	$git config --global credential.helper store
+- Ignore files to commit: 
+	.gitignore file
+- Commit template
+	sudo git config --system commit.template /home/labsuser/commit-template.txt
+- Clone repo
+	$git clone <git repo>
+- Pull repo
+	$git pull
+- Merge branch
+	$git merge <branch>
+- Log
+	$git log --oneline
+	$git log -q
+	$git log -p
+	$git log --stat --summary
 
 - Diff [Tracking is the ability to identify changes between the different versions of the same file, spread across various repositories.]
 	$git diff --staged / $git diff HEAD
