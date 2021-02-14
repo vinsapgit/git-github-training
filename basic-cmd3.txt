@@ -29,7 +29,21 @@ Revert
 
 
 Reset
-
+   --hard
+    429  vi F8.java  [do modification 1 ]
+    431  git add F8.java 
+    432  git commit -m "F8.1" [do local commit]
+    433  vi F8.java  [do more modification 2]
+    434  git add F8.java 
+    435  git commit -m "F8.2" [do local commit]
+    441  vi F8.java [do more modification 3]
+    443  git add F8.java  [***Staged this changes. Do not commit]
+    448  vi F1.java [do more modification on F1.java file]
+    449  git status [***Do not stage at all. Unstaged file]
+    450  git log --oneline -n 5 [We want to hard reset on a commitId.]
+ ***451  git reset --hard ac2db39. [It reset/clean my stage area and also unstage area.]
+    452  git status  [nothing is on stage and unsatge area]
+    
 Rebase
 
 Rebase Interactive
