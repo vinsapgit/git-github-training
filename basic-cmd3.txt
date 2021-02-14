@@ -1,0 +1,37 @@
+Fork branch sync with upstream
+348  cd handson-basic/
+  351  mkdir fork-hands-on
+  352  cd fork-hands-on/
+  353  git clone  https://gitlab.com/divang/git-hands-on.git 
+  355  cd git-hands-on/
+  359  git remote add upstream https://github.com/github06022021/handson-basic.git [Set the upstream]
+  360  git remote -v
+  361  git fetch upstream [Fetch from upstream/orginal repo]
+  364  git pull upstream main  
+  368  git push 
+ 
+ 
+Revert
+
+  395  git log --oneline -n 10
+  397  vi F7.java                           [added the buggy configuration or code]
+  399  git add F7.java 
+  401  git commit -m "Buggy code has added" [committed the buggy configuration or code]
+  402  git push                             [pushed to remote repo with the buggy configuration or code]
+  403  git log --oneline -n 10
+  404  vi F8.java                            [New feature which does not have any issue] 
+  405  git add F8.java 
+  406  git commit -m "Feature 8 added"
+  409  git log --oneline -n 5                [pick the commit id which has buggy code] 
+  408  git revert 0d8d545                    [*** revert that perticular commit] 
+  410  git push
+  411  git log --oneline -n 5
+
+
+Reset
+
+Rebase
+
+Rebase Interactive
+
+GitFlow workflow
