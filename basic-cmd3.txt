@@ -1,3 +1,39 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@vinsapgit 
+Learn Git and GitHub without any code!
+Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
+
+
+divang
+/
+git-github-training
+1
+2
+20
+Code
+Issues
+Pull requests
+1
+Actions
+Projects
+Wiki
+Security
+Insights
+git-github-training/basic-cmd-3.txt
+@divang
+divang Update basic-cmd-3.txt
+Latest commit d127864 4 days ago
+ History
+ 1 contributor
+226 lines (187 sloc)  8.36 KB
+  
 Fork branch sync with upstream
 348  cd handson-basic/
   351  mkdir fork-hands-on
@@ -26,8 +62,6 @@ Revert
   408  git revert 0d8d545                    [*** revert that perticular commit] 
   410  git push
   411  git log --oneline -n 5
-
-
 
 Reset
    --hard
@@ -150,9 +184,79 @@ Reset
 
           no changes added to commit (use "git add" and/or "git commit -a")
           labsuser@ubuntu1804:~/handson-basic$ 
-    
+ 
 Rebase
+      main :  F1->F2->F3->F5->F6
+      Feature:          ->F4
+      Rebase: F1->F2->F3->F5->F6->F4
+      
+
+        Developer 1:
+              Feature branch
+                git branch -b F2 main
+                git log
+                >>>>
+                  c6c03b7 F13
+                  af9cd8c F10-F2
+                  036890a F12
+                  be06621 F11
+                 
+                 git rebase origin/main
+                 F10.java has conflit
+                 git mergetool
+                 [manually resolve the confit]
+                 git add F10.java
+                 git rebase --continue
+                 git push
+                 
+                 git log
+                  >>>
+                    ca4c168 (HEAD -> F2, origin/F2) Merge branch 'F2' of https://github.com/github06022021/handson-basic into F2
+               
+        Developer 2:
+              git push origin main
+              git log 
+              >>>
+                42f7693 (origin/main) F14 [***]
+                6f97e16 F10-main          [***]
+                036890a F12
+                be06621 F11
 
 Rebase Interactive
+    git rebase -i HEAD~10
+  
+    output in VI>>>
+          pick 016809f F8
+          pick d5bfe2b F10
+          pick be06621 F11
+          pick 7a7cf02 F14-Combined
+          pick a6b8dab F12
+          pick bd07d7c Fixed F10.java
+          pick 05b5c2c F13
+          pick 2b6040b F15
+          pick e766b4e F16
+          pick a1dc806 F14-F2
+
+          # Rebase 2ad0511..a1dc806 onto 2ad0511 (10 commands)
+          #
+          # Commands:
+          # p, pick = use commit
+          # r, reword = use commit, but edit the commit message
+          # e, edit = use commit, but stop for amending
+          # s, squash = use commit, but meld into previous commit
+          # f, fixup = like "squash", but discard this commit's log message
+          # x, exec = run command (the rest of the line) using shell
+          # d, drop = remove commit
+          #
+          # These lines can be re-ordered; they are executed from top to bottom.
+          #
+          # If you remove a line here THAT COMMIT WILL BE LOST.
+          #
+          # However, if you remove everything, the rebase will be aborted.
+          #
+          # Note that empty commits are commented out
+          ~                                                 
+
 
 GitFlow workflow
+
