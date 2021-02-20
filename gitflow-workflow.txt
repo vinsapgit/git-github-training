@@ -44,3 +44,70 @@ Finishing a hotfix branch
 	git checkout develop
 	git merge --no-ff hotfix-1.2.1
 	git branch -d hotfix-1.2.1
+
+
+-----My handon practise
+   10  mkdir gitflow
+   11  cd gitflow/
+   12  ls
+   13  git pull https://github.com/vinsapgit/handson-basic.git
+   14  git clone https://github.com/vinsapgit/handson-basic.git
+   15  ls
+   16  cd handson-basic/
+   17  ls
+   18  git branch
+   19  git checkout -b master
+   20  git branch
+   21  git checkout -b develop master
+   22  git branch
+   23  git checkout -b myfeature develop
+   24  git branch
+   25  ls
+   26  v1 f14.java
+   27  vi f14.java
+   28  v1 f10.java
+   29  vi f10.java
+   30  git status
+   31  git add f14.java
+   32  git commit -m "myfeature f14 added"
+   33  git push
+   34  git push origin develop
+   35  git branch
+   36  git checkout develop
+   37  git log --oneline 
+   38  git checkout myfeature
+   39  git log --oneline 
+   40  git checkout develop
+   41  git merge --no-ff myfeature
+   42  git log --oneline 
+   43  git branch -d myfeature
+   44  git push origin develop
+   45  git checkout -b release-1.2 develop
+   46  echo "Released feature 1.2" >> change.txt
+   47  git add change.txt
+   48  git commit -a -m "Bumped version number to 1.2"
+   49  git branch
+   50  git checkout master
+   51  git merge --no-ff release-1.2
+   52  git log --oneline 
+   53  git branch -d release-1.2
+   54  git branch
+   55  git checkout -b hotfix-1.2.1 master
+   56  git branch
+   57  echo "Released bug 1.2" >> change.txt
+   58  git add change.txt
+   59  git commit -a -m "Bumped version number to 1.2.1"
+   60  vi f10.java
+   61  git add f10.java
+   62  git commit -m "fixed severe prod problem"
+   63  git log --oneline 
+   64  git checkout master
+   65  git merge --no-ff hotfix-1.2.1
+   66  git tag -a 1.2.1
+   67  git checkout develop
+   68  git merge --no-ff hotfix-1.2.1
+   69  git branch -d hotfix-1.2.1
+   70  git branch
+   71  git log --oneline -n 10
+   72  git checkout master
+   73  git log --oneline -n 10
